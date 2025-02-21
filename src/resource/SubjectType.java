@@ -1,0 +1,17 @@
+package resource;
+
+public enum SubjectType {
+	COMPROG,
+	DATAALGO,
+	INTROTOCEDT,
+	DISCRETEMATH,
+	DIGLO,
+	
+	PROGMETH,
+	DATABASE,
+	FRONTEND,
+	BACKEND,
+	SOFTWAREENG,
+	SOFTWARELAB,
+	NONE
+}
