@@ -1,4 +1,4 @@
-package resource;
+package resourceUtil;
 
 public class getDescription {
 	

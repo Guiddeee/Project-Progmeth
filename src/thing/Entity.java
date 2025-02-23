@@ -1,10 +1,15 @@
 package thing;
 
+import javafx.scene.image.Image;
+
 public abstract class Entity {
 	protected int health;
 	protected int posX;
 	protected int posY;
 	protected int speed;
+	protected String name;
+	protected String description;
+	protected Image img;
 	
 	public Entity(int health,int posX,int posY,int speed) {
 		setHealth(health);
@@ -46,5 +51,25 @@ public abstract class Entity {
 	public void setSpeed(int speed) {
 		this.speed = speed;
 	}
+
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	
 	
 }

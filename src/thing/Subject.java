@@ -1,11 +1,9 @@
 package thing;
 
-import resource.SubjectType;
+import resourceUtil.SubjectType;
 
 public class Subject extends Entity{
-	private SubjectType name;
-	private String description;
-	private String img;
+	private SubjectType Subjectname;
 	private Player target;
 	private DropItem dropItem;
 	private int term;
@@ -19,7 +17,8 @@ public class Subject extends Entity{
             	   boolean isGrade,boolean isPaperAttack,boolean isGraderAttack) {
 		
 		super(health,speed,posX,posY);
-		setName(name);
+		setName("Subject");
+		setSubject(name);
 		setDescription(description);
 		setTerm(term);
 		setGrade(isGrade);
@@ -51,7 +50,7 @@ public class Subject extends Entity{
 		//setHealth(getHealth()-shoot.getDamage());
 	}
 	
-	public void shoot(Player target) {
+	public Shoot shoot(Player target) {
 		
 	}
 	
@@ -59,11 +58,13 @@ public class Subject extends Entity{
 	
 	
 	//Getter setter
-	public SubjectType getName() {
-		return name;
+	@Override
+	public String getName() {
+		return getName()+" "+this.Subjectname.toString()  ;
 	}
-	public void setName(SubjectType name) {
-		this.name = name;
+	
+	public void setSubject(SubjectType name) {
+		this.Subjectname = name;
 	}
 
 	public String getDescription() {
