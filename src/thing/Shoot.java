@@ -4,18 +4,18 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class Shoot {
-	protected int posX;
-	protected int posY;
-	protected int dX;
-	protected int dY;
+	protected double posX;
+	protected double posY;
+	protected double dX;
+	protected double dY;
 	protected int speed;
 	protected int damage;
 	protected Image img;
 	
 	//Constructor
-	Shoot(int posX,int posY,int dX,int dY,int damage){
-		this.posX=posX;
-		this.posY=posY;
+	Shoot(double posX2,double posY2,int dX,int dY,int damage){
+		this.posX=posX2;
+		this.posY=posY2;
 		this.damage=damage;
 		this.dX=dX;
 		this.dY=dY;
@@ -36,35 +36,35 @@ public class Shoot {
 	
 	
 	//getter setter
-	public int getPosX() {
+	public double getPosX() {
 		return posX;
 	}
 
-	public void setPosX(int posX) {
+	public void setPosX(double posX) {
 		this.posX = posX;
 	}
 
-	public int getPosY() {
+	public double getPosY() {
 		return posY;
 	}
 
-	public void setPosY(int posY) {
+	public void setPosY(double posY) {
 		this.posY = posY;
 	}
 
-	public int getdX() {
+	public double getdX() {
 		return dX;
 	}
 
-	public void setdX(int dX) {
+	public void setdX(double dX) {
 		this.dX = dX;
 	}
 
-	public int getdY() {
+	public double getdY() {
 		return dY;
 	}
 
-	public void setdY(int dY) {
+	public void setdY(double dY) {
 		this.dY = dY;
 	}
 

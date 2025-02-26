@@ -21,11 +21,6 @@ public class HR extends Entity {
 		return new Shoot(posX,posY,dX,dY,getDamage());
 	}
 	
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void render() {

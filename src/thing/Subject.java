@@ -29,10 +29,6 @@ public class Subject extends Entity{
 	}
 
 	//Methods
-	@Override
-	public void move() {
-		
-	}
 
 	@Override
 	public void die() {
@@ -50,9 +46,12 @@ public class Subject extends Entity{
 		//setHealth(getHealth()-shoot.getDamage());
 	}
 	
+	/*!!!!!!
 	public Shoot shoot(Player target) {
+		return new Shoot(term, term, term, term, term);
 		
 	}
+	*/
 	
 	
 	

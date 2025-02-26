@@ -1,5 +1,6 @@
-package thing;
-
+package thing; ///NEED TO BE FIXED
+import javafx.scene.image.Image;
+import resourceUtil.*;
 public class Player extends Entity{
 	private int graderAttack;
 	private int paperAttack;
@@ -9,16 +10,10 @@ public class Player extends Entity{
 		super(health, posX, posY, speed);
 		setGraderAttack(0);
 		setPaperAttack(0);
+		this.img= new Image(ClassLoader.getSystemResource(getImage.getPlayerImg()).toString());
 	}
 
 	//Methods
-
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
-	}
-
 
 
 	@Override
@@ -35,8 +30,8 @@ public class Player extends Entity{
 		
 	}
 	
-	public void takeDamage() {
-		
+	public void takeDamage(int damage) {
+		this.setHealth(getHealth()-damage);
 	}
 	
 	public void shoot(boolean isPaper) {
@@ -63,10 +58,6 @@ public class Player extends Entity{
 	public void setPaperAttack(int paperAttack) {
 		this.paperAttack = paperAttack;
 	}
-
-
-
-	
 	
 	
 }

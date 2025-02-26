@@ -1,11 +1,11 @@
 package thing;
 
 import javafx.scene.image.Image;
-
+import gameLogic.*;
 public abstract class Entity {
 	protected int health;
-	protected int posX;
-	protected int posY;
+	protected double posX;
+	protected double posY;
 	protected int speed;
 	protected String name;
 	protected String description;
@@ -19,7 +19,17 @@ public abstract class Entity {
 	};
 	
 	//METHODS
-	public abstract void move();
+	public void move(double moveX,double moveY) {
+		double dx = (Game.getWIDTH() / 2) - moveX;
+        double dy = (Game.getHEIGHT() / 2) - moveY;
+        double length = Math.sqrt(dx * dx + dy * dy);
+        dx=dx/length;
+        dy=dy/length;
+        this.posX=(posX+dx*this.speed);
+        this.posY=(posY+dy*this.speed);
+        
+	}
+	
 	public abstract void die();
 	public abstract void render();
 
@@ -28,20 +38,21 @@ public abstract class Entity {
 		return health;
 	}
 	public void setHealth(int health) {
-		this.health = health;
+		if(health>=0) this.health = health;
+		else 		  this.health=0;
 	}
 	
-	public int getPosX() {
+	public double getPosX() {
 		return posX;
 	}
-	public void setPosX(int posX) {
-		this.posX = posX;
+	public void setPosX(double d) {
+		this.posX = d;
 	}
 
-	public int getPosY() {
+	public double getPosY() {
 		return posY;
 	}
-	public void setPosY(int posY) {
+	public void setPosY(double posY) {
 		this.posY = posY;
 	}
 
@@ -68,6 +79,9 @@ public abstract class Entity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public Image getImg() {
+		return img;
 	}
 
 	
